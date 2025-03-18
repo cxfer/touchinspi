@@ -17,7 +17,7 @@ class UserItem extends StatelessWidget {
           Text('Email: ${user.email}'),
           Text('Occupation: ${user.occupation}'),
           Text('Bio: ${user.bio}'),
-          Text('ID: ${user.id}'), // Display the _id field
+          Text('ID: ${user.id}'),
         ],
       ),
       onTap: onTap,

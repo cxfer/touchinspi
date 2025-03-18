@@ -17,9 +17,9 @@ class UserDetailScreen extends StatelessWidget {
         title: Text(user?.name ?? 'Loading...'),
         backgroundColor: Colors.blue,
       ),
-      backgroundColor: Color.fromARGB(255, 28, 9, 83),
+      backgroundColor: const Color.fromARGB(255, 28, 9, 83),
       body: user == null
-          ? Center(child: Text('User not found'))
+          ? const Center(child: Text('User not found'))
           : Center(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -29,32 +29,30 @@ class UserDetailScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Container(
-                    width: 500, // Adjustable width
-                    height: 400, // Adjustable height
+                    width: 500,
+                    height: 400,
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text('Name: ${user.name}',
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.bold)),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Text('Email: ${user.email}',
                             style: TextStyle(fontSize: 16)),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Text('Occupation: ${user.occupation}',
                             style: TextStyle(fontSize: 16)),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Text('Bio: ${user.bio}',
                             style: TextStyle(fontSize: 16)),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Text('ID: ${user.id}', style: TextStyle(fontSize: 16)),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         ElevatedButton(
-                          onPressed: () {
-                            // Navigate to edit screen
-                          },
-                          child: Text('Edit'),
+                          onPressed: () {},
+                          child: const Text('Edit'),
                         ),
                       ],
                     ),

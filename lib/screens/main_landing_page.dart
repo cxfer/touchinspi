@@ -13,11 +13,11 @@ class MainLandingPage extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
+            const DrawerHeader(
+              decoration: const BoxDecoration(
                 color: Colors.blue,
               ),
-              child: Text(
+              child: const Text(
                 'Menu',
                 style: TextStyle(
                   color: Colors.white,
@@ -48,8 +48,8 @@ class MainLandingPage extends StatelessWidget {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          Image.network(
-            'https://upload.wikimedia.org/wikipedia/commons/0/03/WEB_Technology.jpg',
+          Image.asset(
+            'assets/x.jpg',
             fit: BoxFit.cover,
           ),
           Container(
@@ -62,7 +62,7 @@ class MainLandingPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'Touch Inspiration Flutter',
                     style: TextStyle(
                       fontSize: 32,
@@ -72,7 +72,7 @@ class MainLandingPage extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 20),
-                  Text(
+                  const Text(
                     'We provide top-notch technology solutions to empower businesses worldwide.',
                     style: TextStyle(
                       fontSize: 18,
@@ -94,7 +94,7 @@ class MainLandingPage extends StatelessWidget {
                       padding:
                           EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                     ),
-                    child: Text(
+                    child: const Text(
                       'View All Users',
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),

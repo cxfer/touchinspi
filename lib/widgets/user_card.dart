@@ -27,9 +27,11 @@ class UserCard extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: isSmall ? 20 : 30,
-                  backgroundImage: NetworkImage(
-                    'https://w7.pngwing.com/pngs/328/599/png-transparent-male-avatar-user-profile-profile-heroes-necktie-recruiter.png',
-                  ),
+                  backgroundImage: const AssetImage('assets/images/bm.png'),
+                  onBackgroundImageError: (error, stackTrace) {
+                    print('Image load error: $error');
+                  },
+                  child: Icon(Icons.error),
                 ),
                 SizedBox(height: 8),
                 Text(

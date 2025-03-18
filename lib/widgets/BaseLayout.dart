@@ -17,14 +17,11 @@ class BaseLayout extends StatelessWidget {
       ),
       body: child,
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0, // Set the selected index
+        currentIndex: 0,
         onTap: (index) {
-          // Handle navigation
           if (index == 0) {
-            // Navigate to the main screen (home)
             Navigator.pushReplacementNamed(context, '/');
           } else if (index == 1) {
-            // Navigate to a placeholder screen (e.g., Profile)
             Navigator.pushReplacementNamed(context, '/profile');
           }
         },

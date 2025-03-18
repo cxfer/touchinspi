@@ -17,7 +17,7 @@ samples, guidance on mobile development, and a full API reference.
 
 App:
 
-Activate Proxy Server by running: 
+Activate Proxy Server for getting the data from the api endpoint by running: 
 
 npm install node-fetch@2
 node server.js

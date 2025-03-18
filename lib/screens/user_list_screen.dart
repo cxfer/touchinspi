@@ -109,7 +109,7 @@ class _UserListScreenState extends State<UserListScreen> {
                             Positioned(
                               right: 0,
                               child: IconButton(
-                                icon: Icon(Icons.arrow_right, size: 32),
+                                icon: const Icon(Icons.arrow_right, size: 32),
                                 onPressed: _scrollRight,
                               ),
                             ),
@@ -125,7 +125,7 @@ class _UserListScreenState extends State<UserListScreen> {
 
                             return GridView.builder(
                               shrinkWrap: true,
-                              physics: NeverScrollableScrollPhysics(),
+                              physics: const NeverScrollableScrollPhysics(),
                               gridDelegate:
                                   SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: crossAxisCount,
