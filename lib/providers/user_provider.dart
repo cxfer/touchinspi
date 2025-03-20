@@ -76,4 +76,22 @@ class UserProvider with ChangeNotifier {
       notifyListeners();
     }
   }
+
+  void updateUserLocally(User updatedUser, BuildContext context) {
+    final index = _users.indexWhere((user) => user.id == updatedUser.id);
+    if (index != -1) {
+      _users[index] = updatedUser;
+    }
+
+    // Show success message
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+            'Yoo your POST, PATCH and PUT aint working bro meanwhile, User changes saved locally! 😊 '),
+        backgroundColor: Colors.green,
+      ),
+    );
+
+    notifyListeners();
+  }
 }

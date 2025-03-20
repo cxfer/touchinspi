@@ -48,11 +48,9 @@ class _EditUserScreenState extends State<EditUserScreen> {
       );
 
       final userProvider = Provider.of<UserProvider>(context, listen: false);
-      await userProvider.updateUser(widget.user.id!, updatedUser, context);
+      userProvider.updateUserLocally(updatedUser, context);
 
-      if (userProvider.error == null) {
-        Navigator.pop(context);
-      }
+      Navigator.pop(context);
     }
   }
 
