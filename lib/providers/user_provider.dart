@@ -87,7 +87,7 @@ class UserProvider with ChangeNotifier {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
-            'Yoo your POST, PATCH and PUT aint working bro meanwhile, User changes saved locally! 😊 '),
+            'Yoo your POST, PATCH and PUT aint working bro User changes saved locally! 😊 '),
         backgroundColor: Colors.green,
       ),
     );
