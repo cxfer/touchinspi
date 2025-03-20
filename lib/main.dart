@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'database/local_database.dart';
 import 'providers/user_provider.dart';
 import 'screens/main_landing_page.dart';
 
-void main() {
+void main() async {
   runApp(
     ChangeNotifierProvider(
       create: (_) => UserProvider(),
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Wanjohi Ndungu | TouchInspiration Interview',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

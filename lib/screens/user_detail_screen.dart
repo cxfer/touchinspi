@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/user_provider.dart';
+import 'EditUserScreen.dart';
 
 class UserDetailScreen extends StatelessWidget {
   final String userId;
@@ -51,7 +52,15 @@ class UserDetailScreen extends StatelessWidget {
                         Text('ID: ${user.id}', style: TextStyle(fontSize: 16)),
                         const SizedBox(height: 20),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    EditUserScreen(user: user),
+                              ),
+                            );
+                          },
                           child: const Text('Edit'),
                         ),
                       ],
